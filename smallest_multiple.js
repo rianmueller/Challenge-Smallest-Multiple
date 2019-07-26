@@ -16,7 +16,7 @@ module.exports = function(ceiling) {
   for (y = Math.floor(ceiling / 2) + 1; y <= ceiling - 1; y++) {
     if ((x * ceiling) % y !== 0) {
       x++;
-      y = 1;
+      y = Math.floor(ceiling / 2);
     }
   }
   return x * ceiling;
